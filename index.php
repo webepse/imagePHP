@@ -11,15 +11,9 @@
     <title>Document</title>
 </head>
 <body>
-    <nav>
-        <div id="logo">Logo</div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#pres">Présentation</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <?php
+        include("partials/header.php");
+    ?>
     <div class="slide" id="home"></div>
     <div class="slide" id="pres"></div>
     <div class="slide" id="news">

@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html,body{
+    scroll-behavior: smooth;
+}
+
 .container{
     width: 1200px;
     margin: 0 auto;
@@ -129,6 +133,45 @@ nav ul li a:hover{
     background-color: gold;
 }
 
+
+
+/**************** news.php ****************/
+#my-news{
+    padding-top: 60px;
+}
+
+.cover{
+    height: 30vh;
+    background-position: center center;
+    background-size: cover;  
+    color: white;
+    text-shadow: 2px 2px 3px black;
+    padding-top: 15px;
+}
+
+.cover h1{
+    margin: 15px 0;
+    font-size: 45px;
+}
+
+.cover .date{
+    font-size: 25px;
+}
+
+.content{
+    padding-top: 35px;
+}
+
+.content .return{
+    display: block;
+    width: 150px;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    background-color: dodgerblue;
+    text-decoration: none;
+    margin: 30px 0;
+}
 
 
 
