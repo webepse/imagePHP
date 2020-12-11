@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.slide{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+/**************** navigation ***************/
+
+nav{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+#logo{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    width: 20%;
+}
+
+nav ul{
+    width: 60%;
+    display: flex;
+    list-style: none;
+}
+
+nav ul li{
+    flex: 1;
+}
+
+nav ul li a{
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav ul li a:hover{
+    background-color: silver;
+}
+
+/**************** home ***************/
+
+#home{
+    background-color: dodgerblue;
+}
+
+/**************** presentation ***************/
+
+#pres{
+    background-color: crimson;
+}
+
+
+/**************** news ***************/
+
+#news{
+    background-color: white;
+    padding-bottom: 30px;
+}
+
+#container-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.cards{
+    border: solid 1px #b6b6b6;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cards img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;   
+}
+
+.cards-content{
+    padding: 10px;
+}
+
+.cards-content h2{
+    margin: 5px 0 10px;
+}
+
+.cards-content p{
+    margin: 10px 0;
+}
+
+.cards-content .btn{
+    display: block;
+    text-align: center;
+    width: 160px;
+    line-height: 40px;
+    color: white;
+    background-color: dodgerblue;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.cards-content .btn:hover{
+    background-color: #134d86;
+}
+
+
+/**************** contact ***************/
+#contact{
+    background-color: gold;
+}
+
+
+
+
+/************* media queries **********/
+
+@media all and (max-width: 1200px){
+    .container{
+        width: 95%;
+    }
+}
+
+@media all and (max-width: 900px){
+    #container-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media all and (max-width: 600px){
+    #container-cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
