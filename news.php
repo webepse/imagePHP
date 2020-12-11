@@ -5,10 +5,20 @@
     // connexion bdd
     require "connexion.php";
 
+    // sécurité
+    // récup la variable id dans l'url ($_GET[''])
+    $id = htmlspecialchars($_GET['id']); // htmlspecialchars modifie le contenu et transforme tous les KK spéciaux en entité HTML
+
     // requête à la base de données
     $news = $bdd->prepare("SELECT title, DATE_FORMAT(date,'%d / %m / %Y') AS mydate, cover, content FROM news WHERE id=?");
-    $news->execute([$_GET['id']]);
-    $donNews = $news->fetch();
+    $news->execute([$id]);
+    // vérifier si j'ai une réponse
+    if(!$donNews = $news->fetch())
+    {
+        $news->closeCursor();
+        header("LOCATION:index.php#news");
+    }
+    $news->closeCursor();
 
 
     /* utilisation de la méthode <?php echo ... ?> => <?= ... ?> */
